@@ -25,7 +25,7 @@ namespace SalesWebMvc.Controllers
         public async Task <IActionResult> SimpleSearch(DateTime? minDate, DateTime? maxDate)
         {
             var result = await _salesRecordService.FindByDateAsync(minDate, maxDate);
-            return View();
+            return View(result);
         }
 
         public IActionResult GroupingSearch()
